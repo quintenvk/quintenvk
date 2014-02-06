@@ -9,12 +9,12 @@ class Controller {
 	protected $responseCode = 200;
 	protected $contentType = 'json';
 	protected $noOutputHandling = false;
-	protected $prefix = 'process';
+	protected static $prefix = 'process';
 
 	public static function dispatchAPICall() {
 
 		//routing to the correct class
-		$method = $this->prefix.capitalize(HTTP::getMethod());
+		$method = self::$prefix.ucfirst(HTTP::getMethod());
 		$arguments = func_get_args();
 		$castedArguments = array();
 
