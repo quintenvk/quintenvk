@@ -1,7 +1,6 @@
 <?php
 namespace quintenvk;
-
-use \RedBean_Facade as R;
+use \R;
 /**
  * a class to help with nestedset functionality for redbean.
  */
