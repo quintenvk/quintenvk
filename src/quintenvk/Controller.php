@@ -40,6 +40,8 @@ class Controller {
 
 	public function doOutput() {
 		if(!$this->noOutputHandling)	{
+			header("Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0");
+			header("Pragma: no-cache");
 			$response = $this->response;
 			\quintenvk\HTTP::setResponseCode($this->responseCode);
 			\quintenvk\HTTP::setContentType($this->contentType);
