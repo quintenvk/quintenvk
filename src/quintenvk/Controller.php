@@ -5,7 +5,7 @@ namespace quintenvk;
  */
 class Controller {
 
-	protected $response = array();
+	protected $response = array("isEmptyResponse" => true);
 	protected $responseCode = 200;
 	protected $contentType = 'json';
 	protected $noOutputHandling = false;
